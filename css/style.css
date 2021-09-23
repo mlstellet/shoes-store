@@ -29,7 +29,6 @@ nav {
 }
 
 .menu {
-    width: 40%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -42,9 +41,11 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 10px;
+    padding: 0;
 }
 
 .menu ul li {
+    margin: 0 20px;
     list-style: none;
     text-transform: uppercase;
     font-size: 18px;
@@ -60,6 +61,7 @@ button {
     cursor: pointer;
 }
 
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -70,7 +72,7 @@ button {
 /* BANNER */
 
 .banner {
-    width: 100%;
+    width: 100vw;
     height: 255px;
 
     background-image: url("../images/image\ 13.png");
@@ -81,7 +83,7 @@ button {
 /* STYLE */
 
 .style {
-    margin: 40px;
+    margin: 40px 0;
 
     display: flex;
     flex-direction: column;
@@ -89,6 +91,8 @@ button {
 }
 
 .style h1 {
+    text-align: center;
+    margin: 50px;
     font-size: 50px;
     font-weight: 700;
 }
@@ -106,6 +110,7 @@ button {
 }
 
 .style-images img {
+    max-width: 80%;
     margin: 30px 20px;
 }
 
@@ -182,9 +187,13 @@ button {
     flex-wrap: wrap;
 }
 
+.destaque img {
+    max-width: 100%;
+}
+
 .left-side, .right-side {
     margin: 30px 20px;
-    width: 500px;
+    width: 520px;
     display: flex;
     justify-content: center;
 }
@@ -255,10 +264,14 @@ footer {
 
 .links {
     width: 50%;
-    padding: 30px 0 0;
+    padding: 30px 20px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
+}
+
+.institucional, .categorias {
+    margin: 0 15px;
 }
 
 .links ul {
@@ -268,4 +281,159 @@ footer {
 .links ul li {
     list-style: none;
     color: #FFFFFF;
+}
+
+@media (max-width: 1330px) {
+    .banner {
+        background-size: contain;;
+    }
+}
+
+@media (max-width: 1020px) { 
+    .footer-container {
+        justify-content: space-between;
+    }
+
+    .links {
+        width: 405px;
+    }
+}
+
+@media (max-width: 900px) {
+    .banner {
+        display: none;
+    }
+
+    .footer-container {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 750px) {
+    nav {
+        justify-content: center;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 550px) {
+    nav {
+        justify-content: center;
+        padding: 25px;
+    }
+
+    .menu ul {
+        justify-content: space-around;
+    }
+}
+
+/* TRABALHE CONOSCO */
+
+section.main {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.main h1 {
+    font-size: 40px;
+    color: #575757;
+}
+
+.trabalhe-conosco {
+
+    font-size: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #9B9B9B;
+}
+
+.form {
+    width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.disponibilidade, .contato, textarea {
+    display: inline;
+    color: #575757;
+}
+
+.disponibilidade>label, .contato>label {
+    margin-right: 15px;
+}
+
+input, select, textarea {
+    border: 1px solid #9B9B9B;
+    padding: 3px;
+    margin: 0 0 12px 0;
+    color: #575757;
+}
+
+label {
+    margin: 0 0 3px;
+}
+
+input:not([type=checkbox], [type=radio]):active, 
+input:not([type=checkbox], [type=radio]):focus,
+textarea:active, textarea:focus,
+select:focus{
+    border: none;
+    outline: 2px solid #C2185B;
+}
+
+button {
+    font-size: 18px;
+    background-color: #C2185B;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+
+    transition: all 1s;
+}
+
+button:hover {
+    color: #C2185B;
+    background-color: #FFFFFF;
+    border: .3px solid #C2185B;
+}
+
+.info {
+    width: 500px;
+    color: #575757;
+}
+
+.info p {
+    margin: 0 0 20px ;
+}
+
+
+@media (max-width: 1024px) {
+    h1 {
+        text-align: center;
+    }
+
+    .trabalhe-conosco {
+        justify-content: center;
+    }
+
+    .form, .info{
+        margin: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    section.main {
+        width: 95vw;
+    }
+
+    .form, .info {
+        width: 95%;
+    }
 }
